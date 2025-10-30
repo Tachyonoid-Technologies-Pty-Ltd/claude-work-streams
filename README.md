@@ -1,6 +1,10 @@
-# Claude Work Streams
+```
+╦ ╦╔═╗╦═╗╦╔═  ╔═╗╔╦╗╦═╗╔═╗╔═╗╔╦╗╔═╗
+║║║║ ║╠╦╝╠╩╗  ╚═╗ ║ ╠╦╝║╣ ╠═╣║║║╚═╗
+╚╩╝╚═╝╩╚═╩ ╩  ╚═╝ ╩ ╩╚═╚═╝╩ ╩╩ ╩╚═╝
+```
 
-Intelligent work stream management for Claude Code
+**Intelligent work stream management for Claude Code**
 
 ## The Problem
 
