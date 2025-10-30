@@ -1,7 +1,7 @@
 {
   "name": "work-streams",
-  "description": "Intelligent work stream management for Claude Code - seamlessly continue complex development tasks across multiple sessions",
-  "version": "1.0.0",
+  "description": "Intelligent work stream management for Claude Code - seamlessly continue complex development tasks across multiple sessions with template-driven workflows",
+  "version": "1.1.0",
   "author": {
     "name": "Tachyonoid Technologies Pty Ltd",
     "email": "tachyonoid@gmail.com",
@@ -14,6 +14,7 @@
   "keywords": [
     "session-management",
     "workflow",
+    "stream-templates",
     "context-preservation",
     "productivity",
     "git-integration",

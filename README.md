@@ -3,20 +3,35 @@
 </p>
 
 <p align="center">
-  <img src=".github/mvp-badge.svg" alt="MVP Release v1.0.0" width="800">
+  <img src=".github/mvp-badge.svg" alt="MVP Release v1.1.0" width="800">
 </p>
 
 ---
 
-## MVP Release Notes
+## Release Notes
 
-This is a **functional MVP release** (v1.0.0). Core features work and have been tested in real scenarios; however, there are many opportunities for enhancement and additional value added features.
+### v1.1.0 - Stream Templates (Current Release)
+
+This release adds a comprehensive template system providing structured guidance for common development workflows.
+
+**New Features**:
+• Stream templates for common workflows (feature, bug-fix, refactoring, documentation)
+• `/stream-template` command with list/show/use actions
+• Template integration with `/stream-start --template` flag
+• Pre-defined goals, checkpoint guidance, and best practises per workflow
+• Custom template support for user-defined workflows
+
+### v1.0.0 - MVP Release
+
+Initial release with core stream management functionality.
 
 ### Current Functionality
-• 10 working commands for stream management
-• Basic context injection and restoration
+• 11 working commands for stream management
+• Stream templates for common development workflows
+• Template-driven workflow guidance with pre-defined goals
+• Smart context injection and restoration
 • Git integration with branch tracking and commits
-• Manual context monitoring
+• Context monitoring with optimised thresholds
 • File based YAML metadata storage
 • Tested with real context compaction scenarios
 
@@ -42,7 +57,6 @@ This is a **functional MVP release** (v1.0.0). Core features work and have been 
 
 **Stream Management**
 • No stream search or filtering
-• Missing stream templates
 • No archiving or cleanup features
 • Cannot merge or split streams
 • No stream dependencies or linking
@@ -62,16 +76,18 @@ This is a **functional MVP release** (v1.0.0). Core features work and have been 
 
 ### Roadmap
 
-**v1.1.0: Stability (Next Release)**
+**v1.1.0: Stream Templates (Current Release)**
+• Stream templates for common workflows ✓
+• Template management commands ✓
+• Pre-defined goals and guidance ✓
+• Custom template support ✓
+
+**v1.2.0: Stability and Enhanced UX (Next Release)**
 • Comprehensive error handling
 • Input validation and sanitization
 • Automatic recovery mechanisms
-• Better user feedback and messaging
-
-**v1.2.0: Enhanced UX**
 • Interactive prompts for critical operations
 • Progress indicators for long tasks
-• Stream templates for common workflows
 • Search and filtering capabilities
 
 **v1.3.0: Advanced Git**
@@ -106,6 +122,8 @@ Claude Work Streams provides true session continuity by automatically preserving
 
 ## Features
 
+- **Stream Templates**: Pre-configured workflows for common development patterns (feature, bug-fix, refactoring, documentation)
+- **Template-Driven Workflows**: Pre-defined goals, checkpoint guidance, and best practises for each workflow type
 - **Work Stream Tracking**: Group related work into continuous streams spanning multiple sessions
 - **Smart Context Injection**: Automatic context restoration with intelligent summarization (under 2000 tokens)
 - **Seamless Continuity**: Resume work streams with full context automatically injected
@@ -114,6 +132,7 @@ Claude Work Streams provides true session continuity by automatically preserving
 - **Git Integration**: Full git support with branch tracking, commit management, and state monitoring
 - **Stream Navigation**: Browse, resume, and manage multiple work streams
 - **Neutral Commit Messages**: Professional git commits with no tool attribution
+- **Custom Templates**: Create your own templates for recurring workflows
 
 ## Installation
 
@@ -163,6 +182,12 @@ Or manually:
 ```
 
 ## Commands
+
+### Stream Templates
+- `/stream-template list` - Display all available templates (built-in and custom)
+- `/stream-template show [name]` - View detailed template information and guidance
+- `/stream-template use [template] [stream-name]` - Create stream from template
+- `/stream-start [name] --template [template]` - Start stream with template (alternative method)
 
 ### Core Stream Management
 - `/stream-start [description] [goals...]` - Begin a new work stream with goals
@@ -218,6 +243,34 @@ Or manually:
 
 # Complete stream
 /stream-checkpoint "Payment processing complete"
+/stream-end
+```
+
+### Using Stream Templates
+```bash
+# List available templates
+/stream-template list
+
+# View template details
+/stream-template show feature-development
+
+# Create stream from template (method 1)
+/stream-template use feature-development user-authentication
+
+# Or use with stream-start (method 2)
+/stream-start oauth2-integration --template feature-development
+
+# Template pre-populates:
+# - 8 pre-defined goals (design, implement, test, document, review)
+# - Context with decision points and next steps
+# - Checkpoint guidance (5 key milestones)
+# - Git branch suggestion (feature/oauth2-integration)
+# - Tips and best practises
+
+# Follow template guidance
+/stream-checkpoint "Design complete - OAuth2 architecture defined"
+/stream-checkpoint "Core implementation - OAuth2 flow working"
+/stream-checkpoint "Tests complete - Unit and integration tests passing"
 /stream-end
 ```
 
