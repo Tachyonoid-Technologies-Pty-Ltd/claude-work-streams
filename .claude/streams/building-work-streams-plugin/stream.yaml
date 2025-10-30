@@ -1,10 +1,9 @@
 name: building-work-streams-plugin
 description: Building the work streams plugin for Claude Code
-status: active
+status: completed
 created: 2025-10-30T00:00:00Z
-updated: 2025-10-30T13:47:50Z
-completed: 2025-10-30T13:42:22Z
-resumed: 2025-10-30T13:47:50Z
+updated: 2025-10-30T16:15:00Z
+completed: 2025-10-30T16:15:00Z
 
 git:
   branch: master
@@ -31,7 +30,8 @@ sessions:
 
   - id: session-4
     started: 2025-10-30T13:47:50Z
-    status: active
+    ended: 2025-10-30T16:15:00Z
+    status: completed
     resumed_from: session-3
 
 goals:
