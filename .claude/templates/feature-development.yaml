@@ -1,0 +1,87 @@
+# Feature Development Template
+# Use this template when implementing new features or capabilities
+
+name: feature-development
+description: Template for developing new features with comprehensive tracking and testing
+
+# Stream naming convention
+stream_naming:
+  pattern: "feature-[name]"
+  examples:
+    - "feature-oauth2-authentication"
+    - "feature-user-dashboard"
+    - "feature-payment-integration"
+
+# Goals template - common objectives for feature development
+goals:
+  - [ ] Define feature requirements and scope
+  - [ ] Design feature architecture and API
+  - [ ] Implement core functionality
+  - [ ] Write unit tests
+  - [ ] Write integration tests
+  - [ ] Update documentation
+  - [ ] Code review and refinement
+  - [ ] User testing and feedback
+
+# Context template - common tracking needs
+context:
+  decisions:
+    - "Architecture approach: [to be defined]"
+    - "Dependencies: [to be defined]"
+    - "API design: [to be defined]"
+
+  next_steps:
+    - "Review existing codebase for integration points"
+    - "Identify dependencies and libraries needed"
+    - "Create feature branch"
+    - "Set up test infrastructure"
+
+# Checkpoint recommendations - suggested checkpoint timing
+checkpoint_guidance:
+  - "After completing feature design and planning"
+  - "After implementing core functionality"
+  - "After writing tests"
+  - "Before code review"
+  - "After incorporating review feedback"
+
+# Git workflow recommendations
+git:
+  branch_prefix: feature/
+  commit_conventions:
+    - "feat: Add [feature name]"
+    - "feat: Implement [component]"
+    - "test: Add tests for [feature]"
+    - "docs: Document [feature]"
+
+# Suggested file tracking patterns
+file_patterns:
+  - "src/**/*.ts"
+  - "src/**/*.js"
+  - "tests/**/*.test.ts"
+  - "tests/**/*.test.js"
+  - "docs/**/*.md"
+  - "README.md"
+
+# Common milestones for feature development
+milestones:
+  - name: "Design Complete"
+    description: "Feature requirements and architecture defined"
+  - name: "Core Implementation"
+    description: "Main functionality implemented"
+  - name: "Tests Complete"
+    description: "Unit and integration tests written and passing"
+  - name: "Documentation Complete"
+    description: "Feature documented with examples"
+  - name: "Code Review"
+    description: "Code reviewed and feedback addressed"
+  - name: "Ready for Merge"
+    description: "All checks passing, ready to merge"
+
+# Tips and best practices
+tips:
+  - "Use /stream-checkpoint after each milestone"
+  - "Commit frequently with clear, conventional messages"
+  - "Update tests as you implement features"
+  - "Document as you build, not after"
+  - "Use /stream-context-check to monitor context usage"
+  - "Create checkpoints before major refactoring"

@@ -6,24 +6,35 @@ description: Start a new work stream to track continuous development work
 
 Start a new work stream with automatic context tracking and session management.
 
-**Usage:** `/project:stream-start [stream-name]`
+**Usage:** `/project:stream-start [stream-name] [--template template-name]`
+
+**Arguments:**
+- `stream-name` - Name for the work stream (required)
+- `--template` - Optional template to use (feature-development, bug-fix, refactoring, documentation, or custom/name)
 
 **Process:**
-1. Check current git branch and status
-2. Optionally suggest creating a new branch for this stream
+1. Check for `--template` flag
+   - If specified, load template from `.claude/templates/[template-name].yaml`
+   - Extract template configuration: goals, context, checkpoint guidance, git settings
+2. Check current git branch and status
+3. Optionally suggest creating a new branch for this stream
    - Generate branch name from stream name (e.g., "oauth2-implementation" → "feature/oauth2-implementation")
+   - If template specified, use template's branch prefix
    - Ask user if they want to create a new branch
    - If yes, create and checkout the new branch
-3. Create stream directory: `.claude/streams/[stream-name]/`
-4. Initialize stream metadata file with:
+4. Create stream directory: `.claude/streams/[stream-name]/`
+5. Initialize stream metadata file with:
    - Stream name and description
    - Start timestamp
    - Initial Claude session ID
    - Current status (Active)
    - Git branch information
-   - Goals/objectives
-5. Create `.claude/streams/.current-stream` pointing to this stream
-6. Set up context tracking
+   - Goals/objectives (from template if specified)
+   - Context (from template if specified)
+   - Template reference (if used)
+6. Create `.claude/streams/.current-stream` pointing to this stream
+7. Set up context tracking
+8. Display template guidance if template was used
 
 **Stream file format:**
 ```yaml
@@ -32,6 +43,7 @@ description: [user provided or extracted from name]
 status: active
 created: [ISO timestamp]
 updated: [ISO timestamp]
+template: [template-name if used]
 
 git:
   branch: [current-branch-name]
@@ -44,7 +56,7 @@ sessions:
     status: active
 
 goals:
-  - [ ] [goals to be defined]
+  - [ ] [goals to be defined or from template]
 
 context:
   files: []
@@ -81,5 +93,63 @@ If you choose no:
 After creation:
 - Confirm stream started
 - Show stream location
+- Display template guidance if template was used
 - Remind about `/project:stream-checkpoint` for saving progress
 - Remind about `/project:stream-end` when work complete
+
+## Using Templates
+
+**Start stream with template:**
+```
+/stream-start my-feature --template feature-development
+```
+
+This will:
+1. Load the feature-development template
+2. Apply template's goals, context, and next steps
+3. Suggest branch name using template's prefix (feature/)
+4. Display template's checkpoint guidance and tips
+
+**Examples:**
+
+Feature development:
+```
+/stream-start user-authentication --template feature-development
+# Stream: user-authentication
+# Branch: feature/user-authentication
+# Goals from template: design, implement, test, document, review
+```
+
+Bug fix:
+```
+/stream-start memory-leak-fix --template bug-fix
+# Stream: memory-leak-fix
+# Branch: bugfix/memory-leak-fix
+# Goals from template: reproduce, diagnose, fix, verify
+```
+
+Refactoring:
+```
+/stream-start database-layer --template refactoring
+# Stream: database-layer
+# Branch: refactor/database-layer
+# Goals from template: analyze, plan, refactor, test
+```
+
+Documentation:
+```
+/stream-start api-reference --template documentation
+# Stream: api-reference
+# Branch: docs/api-reference
+# Goals from template: outline, write, review, publish
+```
+
+**Template Benefits:**
+- Pre-defined goals aligned with workflow type
+- Context templates with decision points and next steps
+- Checkpoint guidance for optimal progress tracking
+- Git conventions (branch prefixes, commit formats)
+- Tips and best practises for the workflow
+- Milestones for tracking progress phases
+
+**Alternative:** Use `/stream-template use [template-name] [stream-name]` for more explicit template usage
