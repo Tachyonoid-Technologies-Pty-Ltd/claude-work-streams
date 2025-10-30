@@ -2,6 +2,42 @@
   <img src=".github/logo.svg" alt="Work Streams - Never Lose Context Again" width="800">
 </p>
 
+<p align="center">
+  <img src=".github/mvp-badge.svg" alt="MVP Release v1.0.0" width="800">
+</p>
+
+---
+
+## MVP Release Notes
+
+This is a **Minimum Viable Product** release - fully functional core features with real-world testing.
+
+### What's Included
+- Complete work stream management (10 commands)
+- Smart context injection and restoration
+- Full git integration with neutral commits
+- Real-time context monitoring with optimized thresholds
+- Proven with actual context compaction scenarios
+- Production-ready documentation
+
+### Known Limitations
+- Basic error handling (edge cases may need manual intervention)
+- No remote git sync detection
+- No stream archiving or search features
+- Single-user focused (no multi-developer coordination)
+
+### Future Enhancements
+- Enhanced error handling and recovery
+- Stream templates for common workflows
+- Remote sync detection and conflict resolution
+- Stream search and filtering
+- Export to markdown reports
+- Multi-developer stream coordination
+
+**Feedback Welcome** - Report issues or contribute at [GitHub Issues](https://github.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams/issues)
+
+---
+
 ## The Problem
 
 When working on complex features in Claude Code, you often hit context limits and need to start fresh sessions. This breaks your workflow as you manually track what you were doing, copy context, and re-explain your progress. Traditional session management tools are just note-taking systems that don't solve the real problem.
