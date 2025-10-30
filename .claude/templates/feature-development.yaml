@@ -4,6 +4,14 @@
 name: feature-development
 description: Template for developing new features with comprehensive tracking and testing
 
+# Stream naming convention
+stream_naming:
+  pattern: "feature-[name]"
+  examples:
+    - "feature-oauth2-authentication"
+    - "feature-user-dashboard"
+    - "feature-payment-integration"
+
 # Goals template - common objectives for feature development
 goals:
   - [ ] Define feature requirements and scope

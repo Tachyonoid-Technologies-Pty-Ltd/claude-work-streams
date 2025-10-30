@@ -1,8 +1,16 @@
 # Refactoring Template
-# Use this template when improving code structure without changing behavior
+# Use this template when improving code structure without changing behaviour
 
 name: refactoring
 description: Template for systematic refactoring with comprehensive testing
+
+# Stream naming convention
+stream_naming:
+  pattern: "refactor-[component]"
+  examples:
+    - "refactor-authentication-module"
+    - "refactor-database-layer"
+    - "refactor-api-endpoints"
 
 # Goals template - common objectives for refactoring
 goals:

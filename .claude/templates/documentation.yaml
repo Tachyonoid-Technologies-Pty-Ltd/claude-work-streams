@@ -4,6 +4,14 @@
 name: documentation
 description: Template for comprehensive documentation work including guides, API docs, and tutorials
 
+# Stream naming convention
+stream_naming:
+  pattern: "docs-[topic]"
+  examples:
+    - "docs-api-reference"
+    - "docs-getting-started"
+    - "docs-deployment-guide"
+
 # Goals template - common objectives for documentation
 goals:
   - [ ] Audit existing documentation

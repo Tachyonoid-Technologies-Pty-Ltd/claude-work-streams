@@ -4,6 +4,14 @@
 name: bug-fix
 description: Template for systematic bug fixing with root cause analysis and testing
 
+# Stream naming convention
+stream_naming:
+  pattern: "fix-[issue]"
+  examples:
+    - "fix-login-timeout"
+    - "fix-memory-leak"
+    - "fix-data-validation"
+
 # Goals template - common objectives for bug fixes
 goals:
   - [ ] Reproduce the bug reliably
