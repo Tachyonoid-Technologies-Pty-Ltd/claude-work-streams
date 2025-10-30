@@ -1,0 +1,102 @@
+# Refactoring Template
+# Use this template when improving code structure without changing behavior
+
+name: refactoring
+description: Template for systematic refactoring with comprehensive testing
+
+# Goals template - common objectives for refactoring
+goals:
+  - [ ] Identify code smells and technical debt
+  - [ ] Define refactoring goals and scope
+  - [ ] Ensure test coverage before changes
+  - [ ] Plan refactoring approach
+  - [ ] Implement refactoring incrementally
+  - [ ] Verify all tests still pass
+  - [ ] Review performance impact
+  - [ ] Update documentation
+
+# Context template - common tracking needs
+context:
+  decisions:
+    - "Refactoring target: [to be defined]"
+    - "Code smells identified: [to be listed]"
+    - "Refactoring strategy: [to be defined]"
+    - "Risk assessment: [to be evaluated]"
+
+  next_steps:
+    - "Review existing code and identify issues"
+    - "Ensure comprehensive test coverage"
+    - "Document current behavior"
+    - "Plan incremental refactoring steps"
+
+# Checkpoint recommendations - suggested checkpoint timing
+checkpoint_guidance:
+  - "After identifying refactoring targets"
+  - "After ensuring test coverage is adequate"
+  - "After each significant refactoring step"
+  - "After all tests pass"
+  - "Before final code review"
+
+# Git workflow recommendations
+git:
+  branch_prefix: refactor/
+  commit_conventions:
+    - "refactor: Simplify [component]"
+    - "refactor: Extract [new abstraction]"
+    - "refactor: Reorganize [module structure]"
+    - "test: Add tests before refactoring [component]"
+
+# Suggested file tracking patterns
+file_patterns:
+  - "src/**/*.ts"
+  - "src/**/*.js"
+  - "tests/**/*.test.ts"
+  - "tests/**/*.test.js"
+  - "docs/**/*.md"
+
+# Common milestones for refactoring
+milestones:
+  - name: "Analysis Complete"
+    description: "Code smells and refactoring targets identified"
+  - name: "Test Coverage Verified"
+    description: "Adequate test coverage exists"
+  - name: "Refactoring Planned"
+    description: "Step-by-step refactoring approach defined"
+  - name: "Incremental Changes"
+    description: "Each refactoring step completed with passing tests"
+  - name: "Performance Verified"
+    description: "No performance regression introduced"
+  - name: "Documentation Updated"
+    description: "Code and API documentation reflect changes"
+
+# Refactoring patterns and techniques
+common_patterns:
+  - "Extract Method: Break down large functions"
+  - "Extract Class: Split responsibilities"
+  - "Rename: Improve naming clarity"
+  - "Move Method: Relocate to proper class"
+  - "Replace Conditional with Polymorphism"
+  - "Simplify Complex Conditionals"
+  - "Remove Duplication"
+  - "Improve Error Handling"
+
+# Safety checklist
+safety_checklist:
+  - "All tests passing before starting"
+  - "Commit frequently with small changes"
+  - "Run tests after each refactoring step"
+  - "Keep behavior unchanged"
+  - "Review performance metrics"
+  - "Verify no breaking changes"
+  - "Document any API changes"
+
+# Tips and best practices
+tips:
+  - "Refactor in small, incremental steps"
+  - "Never refactor and add features simultaneously"
+  - "Keep tests passing at all times"
+  - "Use /stream-checkpoint after each major step"
+  - "Document the 'why' behind refactoring decisions"
+  - "Review performance before and after"
+  - "Consider backwards compatibility"
+  - "Use automated refactoring tools when available"

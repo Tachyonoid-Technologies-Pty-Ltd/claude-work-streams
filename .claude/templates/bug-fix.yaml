@@ -1,0 +1,89 @@
+# Bug Fix Template
+# Use this template when fixing bugs or resolving issues
+
+name: bug-fix
+description: Template for systematic bug fixing with root cause analysis and testing
+
+# Goals template - common objectives for bug fixes
+goals:
+  - [ ] Reproduce the bug reliably
+  - [ ] Identify root cause
+  - [ ] Design fix approach
+  - [ ] Implement fix
+  - [ ] Write regression tests
+  - [ ] Verify fix resolves issue
+  - [ ] Test edge cases
+  - [ ] Update documentation if needed
+
+# Context template - common tracking needs
+context:
+  decisions:
+    - "Bug description: [to be defined]"
+    - "Root cause: [to be identified]"
+    - "Fix approach: [to be defined]"
+    - "Affected versions: [to be identified]"
+
+  next_steps:
+    - "Reproduce bug in isolated environment"
+    - "Add debugging and logging"
+    - "Review related code and recent changes"
+    - "Identify test coverage gaps"
+
+# Checkpoint recommendations - suggested checkpoint timing
+checkpoint_guidance:
+  - "After reproducing the bug"
+  - "After identifying root cause"
+  - "After implementing fix"
+  - "After regression tests pass"
+  - "Before deploying fix"
+
+# Git workflow recommendations
+git:
+  branch_prefix: bugfix/
+  commit_conventions:
+    - "fix: Resolve [issue description]"
+    - "fix: Correct [specific problem]"
+    - "test: Add regression test for [bug]"
+    - "docs: Update [affected documentation]"
+
+# Suggested file tracking patterns
+file_patterns:
+  - "src/**/*.ts"
+  - "src/**/*.js"
+  - "tests/**/*.test.ts"
+  - "tests/**/*.test.js"
+  - "CHANGELOG.md"
+
+# Common milestones for bug fixes
+milestones:
+  - name: "Bug Reproduced"
+    description: "Bug can be consistently reproduced"
+  - name: "Root Cause Identified"
+    description: "Underlying cause of bug determined"
+  - name: "Fix Implemented"
+    description: "Code changes applied to resolve bug"
+  - name: "Tests Added"
+    description: "Regression tests prevent future occurrences"
+  - name: "Verification Complete"
+    description: "Fix verified in multiple scenarios"
+  - name: "Ready for Deploy"
+    description: "All checks passing, ready for deployment"
+
+# Bug investigation checklist
+investigation_checklist:
+  - "Review error logs and stack traces"
+  - "Check recent code changes related to bug"
+  - "Review issue reports and user feedback"
+  - "Test in different environments"
+  - "Check for similar bugs in issue tracker"
+  - "Verify expected vs actual behavior"
+
+# Tips and best practices
+tips:
+  - "Document reproduction steps clearly"
+  - "Create minimal test case to reproduce bug"
+  - "Add regression tests before fixing"
+  - "Consider edge cases and boundary conditions"
+  - "Review related code for similar issues"
+  - "Update documentation if behavior changed"
+  - "Use /stream-checkpoint after identifying root cause"

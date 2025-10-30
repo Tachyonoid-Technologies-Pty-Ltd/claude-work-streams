@@ -1,0 +1,134 @@
+# Documentation Template
+# Use this template when creating or updating project documentation
+
+name: documentation
+description: Template for comprehensive documentation work including guides, API docs, and tutorials
+
+# Goals template - common objectives for documentation
+goals:
+  - [ ] Audit existing documentation
+  - [ ] Identify documentation gaps
+  - [ ] Plan documentation structure
+  - [ ] Write new documentation
+  - [ ] Update outdated content
+  - [ ] Add code examples
+  - [ ] Review for clarity and accuracy
+  - [ ] Get feedback from users
+
+# Context template - common tracking needs
+context:
+  decisions:
+    - "Documentation scope: [to be defined]"
+    - "Target audience: [to be defined]"
+    - "Documentation format: [to be defined]"
+    - "Examples needed: [to be identified]"
+
+  next_steps:
+    - "Review existing documentation"
+    - "Identify missing or outdated sections"
+    - "Gather user feedback on current docs"
+    - "Plan documentation outline"
+
+# Checkpoint recommendations - suggested checkpoint timing
+checkpoint_guidance:
+  - "After completing documentation audit"
+  - "After planning documentation structure"
+  - "After writing each major section"
+  - "After adding examples and tutorials"
+  - "Before publishing documentation"
+
+# Git workflow recommendations
+git:
+  branch_prefix: docs/
+  commit_conventions:
+    - "docs: Add [topic] documentation"
+    - "docs: Update [section] with examples"
+    - "docs: Fix typos and clarify [topic]"
+    - "docs: Restructure [section] for clarity"
+
+# Suggested file tracking patterns
+file_patterns:
+  - "docs/**/*.md"
+  - "README.md"
+  - "CONTRIBUTING.md"
+  - "CHANGELOG.md"
+  - "*.md"
+  - "examples/**/*"
+
+# Common milestones for documentation
+milestones:
+  - name: "Documentation Audit"
+    description: "Existing documentation reviewed and gaps identified"
+  - name: "Structure Planned"
+    description: "Documentation outline and organisation defined"
+  - name: "Content Written"
+    description: "New documentation content created"
+  - name: "Examples Added"
+    description: "Code examples and tutorials included"
+  - name: "Review Complete"
+    description: "Documentation reviewed for clarity and accuracy"
+  - name: "Published"
+    description: "Documentation live and accessible"
+
+# Documentation types
+documentation_types:
+  - "Getting Started Guide"
+  - "API Reference"
+  - "Tutorials and How-Tos"
+  - "Architecture Documentation"
+  - "Troubleshooting Guide"
+  - "FAQ"
+  - "Contributing Guidelines"
+  - "Release Notes"
+
+# Quality checklist
+quality_checklist:
+  - "Clear and concise language"
+  - "Proper formatting and structure"
+  - "Code examples tested and working"
+  - "Links verified and working"
+  - "Screenshots/diagrams up to date"
+  - "Consistent terminology"
+  - "No spelling or grammar errors"
+  - "Accessible to target audience"
+
+# Best practices
+best_practices:
+  - "Write for your audience (beginners, advanced, etc.)"
+  - "Use clear, simple language"
+  - "Provide working code examples"
+  - "Include error handling in examples"
+  - "Add diagrams for complex concepts"
+  - "Keep documentation close to code"
+  - "Version documentation with code"
+  - "Gather user feedback regularly"
+
+# Writing style and conventions
+writing_style:
+  tone: "Neutral expository style"
+  spelling: "UK English (behaviour, organisation, optimise, analyse, etc.)"
+  voice: "Third person, objective, informative"
+  structure: "Logical flow with clear headings and subheadings"
+  formatting:
+    - "Use proper punctuation (colons, semicolons, full stops)"
+    - "Avoid em-dashes and informal punctuation"
+    - "Use bullet points (•) for lists"
+    - "Use numbered lists for sequential steps"
+  principles:
+    - "Present information objectively without bias"
+    - "Focus on facts and technical accuracy"
+    - "Explain concepts clearly and systematically"
+    - "Use precise technical terminology"
+    - "Maintain consistent style throughout"
+    - "Avoid colloquialisms and informal language"
+
+# Tips and best practices
+tips:
+  - "Start with user stories and common tasks"
+  - "Test all code examples before publishing"
+  - "Use consistent formatting and style"
+  - "Link between related documentation"
+  - "Include real-world use cases"
+  - "Update docs when code changes"
+  - "Use /stream-checkpoint after major sections"
+  - "Get peer review before publishing"
