@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <style>
+      .title {
+        font-family: 'Courier New', monospace;
+        font-size: 48px;
+        font-weight: bold;
+        letter-spacing: 4px;
+      }
+      .subtitle {
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+      .pixel-border {
+        fill: none;
+        stroke: #00ff00;
+        stroke-width: 3;
+        stroke-dasharray: 8,4;
+      }
+    </style>
+    <linearGradient id="retroGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00cc00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#009900;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="#0a0a0a"/>
+
+  <!-- Decorative border -->
+  <rect x="10" y="10" width="780" height="180" class="pixel-border"/>
+
+  <!-- Main title -->
+  <text x="400" y="80" text-anchor="middle" class="title" fill="url(#retroGradient)" filter="url(#glow)">
+    WORK STREAMS
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="130" text-anchor="middle" class="subtitle" fill="#00ff00" opacity="0.8">
+    ◆ NEVER LOSE CONTEXT AGAIN ◆
+  </text>
+
+  <!-- Bottom line -->
+  <text x="400" y="160" text-anchor="middle" class="subtitle" fill="#00cc00" opacity="0.6">
+    [ INTELLIGENT SESSION MANAGEMENT FOR CLAUDE CODE ]
+  </text>
+
+  <!-- Decorative corner elements -->
+  <rect x="15" y="15" width="20" height="20" fill="#00ff00" opacity="0.3"/>
+  <rect x="765" y="15" width="20" height="20" fill="#00ff00" opacity="0.3"/>
+  <rect x="15" y="165" width="20" height="20" fill="#00ff00" opacity="0.3"/>
+  <rect x="765" y="165" width="20" height="20" fill="#00ff00" opacity="0.3"/>
+</svg>
