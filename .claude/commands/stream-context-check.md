@@ -12,11 +12,10 @@ Check the current context window usage and receive recommendations for session m
 1. Analyze current conversation length
 2. Estimate context usage percentage
 3. Provide recommendations based on usage:
-   - <60%: All good, continue working
-   - 60-79%: Consider checkpoint soon
-   - 80-89%: Checkpoint recommended, plan transition
-   - 90-94%: Create checkpoint now, prepare for transition
-   - 95%+: Critical - checkpoint and transition immediately
+   - <90%: Healthy ✓ - Continue working normally
+   - 90-94%: Monitor ⚠ - Start planning checkpoint soon
+   - 95-97%: Warning ⚠⚠ - Create checkpoint NOW and prepare transition
+   - 98%+: Critical 🚨 - Checkpoint and transition IMMEDIATELY
 
 **Output format:**
 ```
