@@ -10,31 +10,89 @@
 
 ## MVP Release Notes
 
-This is a **Minimum Viable Product** release - fully functional core features with real-world testing.
+This is a **functional MVP release** (v1.0.0). Core features work and have been tested in real scenarios; however, there are many opportunities for enhancement and additional value added features.
 
-### What's Included
-- Complete work stream management (10 commands)
-- Smart context injection and restoration
-- Full git integration with neutral commits
-- Real-time context monitoring with optimized thresholds
-- Proven with actual context compaction scenarios
-- Production-ready documentation
+### Current Functionality
+• 10 working commands for stream management
+• Basic context injection and restoration
+• Git integration with branch tracking and commits
+• Manual context monitoring
+• File based YAML metadata storage
+• Tested with real context compaction scenarios
 
-### Known Limitations
-- Basic error handling (edge cases may need manual intervention)
-- No remote git sync detection
-- No stream archiving or search features
-- Single-user focused (no multi-developer coordination)
+### Areas for Improvement
 
-### Future Enhancements
-- Enhanced error handling and recovery
-- Stream templates for common workflows
-- Remote sync detection and conflict resolution
-- Stream search and filtering
-- Export to markdown reports
-- Multi-developer stream coordination
+**Stability and Robustness**
+• Error handling needs enhancement for edge cases
+• No automatic recovery from failures
+• Missing validation for malformed stream data
+• No rollback capability for failed operations
 
-**Feedback Welcome** - Report issues or contribute at [GitHub Issues](https://github.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams/issues)
+**User Experience**
+• No interactive prompts or confirmations
+• Limited feedback during long operations
+• No progress indicators
+• Manual context threshold checking only
+
+**Git Integration**
+• No remote sync detection or conflict handling
+• Missing branch protection checks
+• No stash management
+• Limited merge conflict support
+
+**Stream Management**
+• No stream search or filtering
+• Missing stream templates
+• No archiving or cleanup features
+• Cannot merge or split streams
+• No stream dependencies or linking
+
+**Collaboration**
+• Single user only (no multi developer support)
+• No stream sharing mechanisms
+• Missing conflict resolution for shared streams
+• No access control or permissions
+
+**Advanced Features**
+• No export to markdown or HTML reports
+• Missing analytics or metrics
+• No automated checkpoint suggestions
+• Limited customization options
+• No plugin system for extensions
+
+### Roadmap
+
+**v1.1.0: Stability (Next Release)**
+• Comprehensive error handling
+• Input validation and sanitization
+• Automatic recovery mechanisms
+• Better user feedback and messaging
+
+**v1.2.0: Enhanced UX**
+• Interactive prompts for critical operations
+• Progress indicators for long tasks
+• Stream templates for common workflows
+• Search and filtering capabilities
+
+**v1.3.0: Advanced Git**
+• Remote sync detection
+• Merge conflict helpers
+• Branch protection awareness
+• Stash integration
+
+**v2.0.0: Collaboration**
+• Multi developer support
+• Stream sharing and permissions
+• Conflict resolution for shared streams
+• Team coordination features
+
+**v2.1.0: Analytics and Reporting**
+• Export to markdown and HTML
+• Development metrics and insights
+• Automated checkpoint suggestions
+• Customizable reports
+
+**Contributions Welcome**: This is an open roadmap. Feature requests, bug reports, and pull requests are encouraged at [GitHub Issues](https://github.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams/issues).
 
 ---
 
