@@ -1,0 +1,38 @@
+{
+  "name": "context-monitor",
+  "description": "Monitor context usage and recommend checkpoints",
+  "enabled": true,
+  "trigger": "post-response",
+  "conditions": {
+    "minResponseCount": 5,
+    "checkInterval": 3
+  },
+  "thresholds": {
+    "healthy": 60,
+    "monitor": 79,
+    "warning": 89,
+    "critical": 94
+  },
+  "actions": {
+    "monitor": {
+      "notify": true,
+      "message": "Context usage approaching 80%. Consider creating a checkpoint soon."
+    },
+    "warning": {
+      "notify": true,
+      "message": "Context usage above 80%. Recommend creating checkpoint and planning transition.",
+      "suggestCommand": "/stream-checkpoint"
+    },
+    "critical": {
+      "notify": true,
+      "message": "Context usage above 90%. Create checkpoint immediately and transition to new session.",
+      "suggestCommands": ["/stream-checkpoint", "/stream-end"]
+    }
+  },
+  "settings": {
+    "quietMode": false,
+    "showPercentage": true,
+    "autoCheckpoint": false,
+    "reminderInterval": 10
+  }
+}
