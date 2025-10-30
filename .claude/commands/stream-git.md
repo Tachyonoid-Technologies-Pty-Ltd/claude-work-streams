@@ -11,6 +11,7 @@ Manage git branch integration, synchronization, and status for work streams.
 **Actions:**
 - `link [branch-name]` - Link stream to existing git branch
 - `create [branch-name]` - Create and link new branch for stream
+- `commit [message]` - Create git commit with neutral, professional message
 - `status` - Show detailed git status for stream
 - `sync` - Sync stream metadata with current git state
 - `unlink` - Remove git branch association from stream
@@ -70,6 +71,138 @@ Created: [timestamp]
 
 Current branch switched to: feature/new-feature
 ```
+
+### Create Git Commit
+```
+/stream-git commit "feat: Add user authentication"
+```
+
+**Usage:** `/stream-git commit [message]`
+
+**Process:**
+1. Stage all current changes (git add .)
+2. Check for changes to commit (warn if nothing to commit)
+3. If no message provided, auto-generate based on:
+   - Recent stream updates and checkpoints
+   - Modified files and their types
+   - Stream context and goals
+   - Conventional commit format detection
+4. Generate neutral, professional commit message
+5. Optionally include stream reference in commit body (not title)
+6. Create commit
+7. Update stream metadata with commit reference
+
+**Smart Commit Message Generation:**
+- **Analyze recent context**: Review last 2-3 updates/checkpoints for work description
+- **Detect file types**: Commands, docs, tests, config, source files
+- **Suggest commit type**:
+  - Commands/features → `feat:`
+  - Bug fixes → `fix:`
+  - Documentation → `docs:`
+  - Refactoring → `refactor:`
+  - Tests → `test:`
+  - Maintenance → `chore:`
+- **Keep concise**: Focus on the primary change
+- **Use neutral language**: Describe WHAT was done, not HOW or by WHOM
+
+**CRITICAL: Commit Message Principles:**
+- **NO references to "Claude", "AI", or assistant tools**
+- **Describe WHAT was done** - Not how or by whom
+- **Focus on the work/features themselves**
+- **Neutral, third-person language**
+- **Conventional format** - type: description
+- **No tool attribution** - No Co-Authored-By or tool mentions
+- **Standalone** - Message makes sense without stream context
+
+**Example:**
+- ✅ "feat: Add git integration"
+- ❌ "Claude added git integration"
+
+**Conventional Commit Types:**
+- `feat:` - New feature or capability
+- `fix:` - Bug fix
+- `refactor:` - Code restructuring without behavior change
+- `docs:` - Documentation changes
+- `test:` - Adding or updating tests
+- `chore:` - Maintenance, dependencies, tooling
+- `perf:` - Performance improvements
+- `style:` - Code style/formatting changes
+
+**Interactive Mode:**
+If no message provided, auto-generate from context:
+```
+Analyzing changes...
+  M  .claude/commands/stream-git.md
+  M  .claude/commands/stream-checkpoint.md
+  A  .claude/commands/stream-context-inject.md
+
+Recent stream updates:
+  - "Added git integration enhancements"
+  - "Created context injection command"
+
+Detected: Documentation and feature files
+Suggested commit type: feat
+
+Generated commit message:
+  feat: Add git integration and context injection features
+
+  Stream: building-work-streams-plugin
+  Session: session-3
+
+Accept this message? (y/n/edit):
+```
+
+**Output:**
+```
+✓ Staging all changes...
+✓ Commit created
+
+[master a1b2c3d] feat: Add git integration and context injection features
+ 3 files changed, 245 insertions(+), 18 deletions(-)
+ create mode 100644 .claude/commands/stream-context-inject.md
+
+Stream metadata updated with commit reference.
+```
+
+**Optional Stream Reference:**
+The commit body can optionally include stream reference for internal tracking:
+```
+feat: Add user authentication with OAuth2
+
+Stream: user-auth-implementation
+Checkpoint: Authentication system complete
+```
+
+This helps correlate commits with stream progress while keeping the title neutral.
+
+**Examples of Good Commit Messages:**
+```
+feat: Add user authentication with OAuth2
+fix: Resolve race condition in data sync
+refactor: Simplify error handling in API client
+docs: Update API documentation with new endpoints
+test: Add integration tests for payment flow
+chore: Update dependencies to latest versions
+perf: Optimize database query performance
+```
+
+**Examples of BAD Commit Messages (NEVER USE):**
+```
+❌ "Stream checkpoint progress"
+❌ "Work from Claude session"
+❌ "Updates (Co-Authored-By: Claude)"
+❌ "Checkpoint: Added features"
+❌ "Progress commit for stream xyz"
+```
+
+**Best Practices:**
+1. Command auto-stages all changes (no need for manual `git add`)
+2. Use conventional commit format (feat:, fix:, docs:, etc.)
+3. Keep messages clear and concise (50 chars for title)
+4. Use imperative mood ("Add feature" not "Added feature")
+5. Focus on **what** changed, not **how** or **who**
+6. Commit title must be neutral - NO tool/process references
+7. Stream reference optional in body, NEVER in title
 
 ### Show Git Status
 ```
@@ -225,9 +358,11 @@ git:
 ## Best Practices
 
 1. **Create Dedicated Branches**: Use `/stream-git create` to keep stream work isolated
-2. **Sync Regularly**: Run `/stream-git sync` after manual git operations
-3. **Check Status**: Use `/stream-git status` to verify git state before checkpoints
-4. **Handle Mismatches**: Address branch mismatches promptly to avoid confusion
+2. **Commit Regularly**: Use `/stream-git commit` for neutral, professional commit messages
+3. **Sync After Manual Operations**: Run `/stream-git sync` after manual git operations
+4. **Check Status Before Commits**: Use `/stream-git status` to verify git state before committing
+5. **Handle Mismatches**: Address branch mismatches promptly to avoid confusion
+6. **Use Conventional Commits**: Follow conventional commit format for consistency
 
 ## Examples
 
@@ -260,4 +395,42 @@ git checkout different-branch
 ```
 /stream-git create feature/late-branch
 ✓ Created and switched to new branch
+```
+
+**Creating a commit with auto-generated message:**
+```
+/stream-git commit
+
+> Analyzing changes...
+>   M  src/auth/oauth.ts
+>   A  src/auth/providers/google.ts
+>   M  tests/auth.test.ts
+>
+> Recent stream context:
+>   - "Implemented OAuth2 provider support"
+>   - "Added Google authentication"
+>
+> Generated commit message:
+>   feat: Implement OAuth2 authentication with Google provider
+>
+>   Stream: user-auth-implementation
+>
+> Accept this message? (y/n/edit): y
+
+✓ Staging all changes...
+✓ Commit created
+[feature/auth a1b2c3d] feat: Implement OAuth2 authentication with Google provider
+ 3 files changed, 145 insertions(+), 12 deletions(-)
+```
+
+**Creating a commit with custom message:**
+```
+/stream-git commit "fix: Resolve race condition in user session handling"
+
+✓ Staging all changes...
+✓ Commit created
+[feature/bugfix 3c4d5e6] fix: Resolve race condition in user session handling
+ 2 files changed, 23 insertions(+), 15 deletions(-)
+
+Stream metadata updated.
 ```
