@@ -138,7 +138,7 @@ Claude Work Streams provides true session continuity by automatically preserving
 
 1. Clone or download this repository to your local machine
 2. Copy the `.claude` directory into your project root
-3. The commands will be available immediately in Claude Code
+3. The commands and templates will be available immediately in Claude Code
 
 ```bash
 # Clone the repository
@@ -151,13 +151,25 @@ cp -r claude-work-streams/.claude /path/to/your/project/
 Or manually:
 1. Create `.claude/commands/` directory in your project
 2. Copy all command files from this repository's `.claude/commands/` directory
-3. Copy `plugin.json` to `.claude/` directory
+3. Create `.claude/templates/` directory and copy template files
+4. Copy `plugin.json` to `.claude/` directory
+
+**What's included**:
+• 11 stream management commands
+• 4 built-in workflow templates
+• Template system for custom workflows
+• Git integration commands
 
 ## Quick Start
 
 ```bash
-# Start a new work stream with goals
-/stream-start "Add OAuth2 authentication" "- Implement OAuth2 flow" "- Add Google provider" "- Add GitHub provider"
+# Option 1: Start with a template (recommended)
+/stream-template list
+/stream-start user-authentication --template feature-development
+# Templates pre-populate goals, checkpoints, and guidance
+
+# Option 2: Start without template
+/stream-start "Add OAuth2 authentication" "- Implement OAuth2 flow" "- Add Google provider"
 
 # Make progress and save lightweight updates
 /stream-update "Completed OAuth2 core implementation"
@@ -178,7 +190,7 @@ Or manually:
 /stream-end
 
 # Resume later with automatic context injection
-/stream-resume add-oauth2-authentication
+/stream-resume user-authentication
 ```
 
 ## Commands
@@ -318,12 +330,15 @@ The plugin monitors your context usage and provides recommendations:
 ## Stream Metadata
 
 All stream data is stored in `.claude/streams/[stream-name]/stream.yaml` with:
+- Template reference (if created from template)
 - Session history
 - Checkpoints with git state
 - Progress updates
 - Goals and decisions
 - File tracking
 - Git integration data
+
+**Template Integration**: When a stream is created from a template, the template name is stored in metadata, and template-defined goals, context, and guidance are pre-populated.
 
 ## Why This Plugin?
 
@@ -333,13 +348,16 @@ Traditional session management approaches fail because they:
 - Lack git integration
 - Don't monitor context usage
 - Provide no automatic restoration
+- No structured workflow guidance
 
 Claude Work Streams solves these problems with:
-- Automatic context injection on resume
-- Comprehensive git integration
-- Real-time context monitoring
-- Smart checkpointing system
-- Professional, neutral commit messages
+- **Template-Driven Workflows**: Pre-configured guidance for common development patterns
+- **Automatic Context Injection**: Smart context restoration on resume
+- **Comprehensive Git Integration**: Branch tracking, commit management, and state monitoring
+- **Real-Time Context Monitoring**: Know when to checkpoint and transition
+- **Smart Checkpointing System**: Capture progress with git state
+- **Professional Commit Messages**: Neutral, conventional commits with no tool attribution
+- **Customizable Templates**: Create your own templates for recurring workflows
 
 ## License
 
