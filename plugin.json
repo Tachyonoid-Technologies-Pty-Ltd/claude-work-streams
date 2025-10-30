@@ -1,19 +1,22 @@
 {
   "name": "work-streams",
   "description": "Intelligent work stream management for Claude Code - seamlessly continue complex development tasks across multiple sessions",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": {
-    "name": "Tachyonoid Technologies",
-    "email": "info@tachyonoid.com"
+    "name": "Tachyonoid Technologies Pty Ltd",
+    "email": "info@tachyonoid.com",
+    "url": "https://github.com/Tachyonoid-Technologies-Pty-Ltd"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tachyonoid/claude-work-streams"
+    "url": "https://github.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams"
   },
   "keywords": [
     "session-management",
     "workflow",
     "context-preservation",
-    "productivity"
+    "productivity",
+    "git-integration",
+    "context-injection"
   ]
 }
