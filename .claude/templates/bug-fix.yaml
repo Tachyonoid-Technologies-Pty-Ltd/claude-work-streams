@@ -14,14 +14,14 @@ stream_naming:
 
 # Goals template - common objectives for bug fixes
 goals:
-  - [ ] Reproduce the bug reliably
-  - [ ] Identify root cause
-  - [ ] Design fix approach
-  - [ ] Implement fix
-  - [ ] Write regression tests
-  - [ ] Verify fix resolves issue
-  - [ ] Test edge cases
-  - [ ] Update documentation if needed
+  - "[ ] Reproduce the bug reliably"
+  - "[ ] Identify root cause"
+  - "[ ] Design fix approach"
+  - "[ ] Implement fix"
+  - "[ ] Write regression tests"
+  - "[ ] Verify fix resolves issue"
+  - "[ ] Test edge cases"
+  - "[ ] Update documentation if needed"
 
 # Context template - common tracking needs
 context:

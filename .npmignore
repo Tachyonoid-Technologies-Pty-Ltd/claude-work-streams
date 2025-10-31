@@ -1,0 +1,39 @@
+# NPM ignore file - exclude from published package
+
+# Development files
+.git/
+.github/
+.gitignore
+.eslintrc.json
+
+# Documentation and examples (keep README.md)
+docs/
+examples/
+tests/
+
+# Development streams (don't publish user data)
+.claude/streams/*
+!.claude/streams/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+.tmp/
+
+# Test coverage
+coverage/
+.nyc_output/

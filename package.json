@@ -1,0 +1,70 @@
+{
+  "name": "@tachyonoid/work-streams",
+  "version": "1.2.0",
+  "description": "Intelligent work stream management for Claude Code - seamlessly continue complex development tasks across multiple sessions with template-driven workflows",
+  "main": "lib/index.js",
+  "bin": {
+    "stream-init": "bin/stream-init.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "claude-code",
+    "session-management",
+    "workflow",
+    "stream-templates",
+    "context-preservation",
+    "productivity",
+    "git-integration",
+    "context-injection",
+    "developer-experience",
+    "cli"
+  ],
+  "author": {
+    "name": "Tachyonoid Technologies Pty Ltd",
+    "email": "tachyonoid@gmail.com",
+    "url": "https://github.com/Tachyonoid-Technologies-Pty-Ltd"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams/issues"
+  },
+  "homepage": "https://github.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.3",
+    "commander": "^11.1.0",
+    "inquirer": "^8.2.5",
+    "js-yaml": "^4.1.0",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "scripts/",
+    "config/",
+    ".claude/commands/",
+    ".claude/templates/",
+    "plugin.json",
+    "README.md",
+    "INSTALLATION.md",
+    "API.md",
+    "EXAMPLES.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "preferGlobal": true
+}
