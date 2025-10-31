@@ -40,7 +40,7 @@
 
   <!-- Center section - Version -->
   <text x="400" y="45" text-anchor="middle" class="badge-text" fill="#8b949e">VERSION</text>
-  <text x="400" y="75" text-anchor="middle" class="version-text" fill="url(#blueGradient)">v1.1.0</text>
+  <text x="400" y="75" text-anchor="middle" class="version-text" fill="url(#blueGradient)">v1.2.0</text>
 
   <!-- Right divider -->
   <line x1="520" y1="25" x2="520" y2="95" stroke="#58a6ff" stroke-width="2" stroke-dasharray="4,4"/>

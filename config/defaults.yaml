@@ -1,0 +1,43 @@
+# Default configuration for Claude Work Streams
+
+# Context monitoring thresholds (percentage of effective context window)
+# Note: Claude Code has 200k total tokens, but ~164k effective usable space
+# Auto-compact triggers at ~95% of usable space (~155k tokens)
+context_thresholds:
+  healthy: 75      # Below 75% (~123k tokens): continue normally
+  monitor: 85      # 75-85% (~139k tokens): start planning checkpoint
+  warning: 90      # 85-90% (~148k tokens): create checkpoint NOW
+  critical: 95     # 90-95% (~156k tokens): checkpoint IMMEDIATELY (auto-compact imminent)
+
+# Stream behavior
+stream:
+  auto_checkpoint_interval: 30  # Minutes between auto-checkpoint reminders
+  default_template: null        # Default template to use (null = no default)
+  auto_git_link: true          # Automatically link to current git branch
+
+# Git integration
+git:
+  auto_create_branch: true     # Offer to create branch when starting stream
+  branch_prefixes:
+    feature: "feature/"
+    bugfix: "bugfix/"
+    refactor: "refactor/"
+    docs: "docs/"
+  commit_message_format: "conventional"  # conventional, simple
+
+# Template settings
+templates:
+  custom_directory: "custom"   # Directory for custom templates
+  auto_load_custom: true       # Automatically load custom templates
+
+# Display settings
+display:
+  use_colors: true             # Use colored output
+  use_icons: true              # Use icons in output
+  date_format: "relative"      # relative, absolute, iso
+
+# Advanced settings
+advanced:
+  compress_old_checkpoints: false  # Compress checkpoints older than X days
+  checkpoint_retention_days: 90    # Days to keep checkpoints (0 = forever)
+  auto_cleanup_completed: false    # Auto-archive completed streams

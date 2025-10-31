@@ -14,14 +14,14 @@ stream_naming:
 
 # Goals template - common objectives for documentation
 goals:
-  - [ ] Audit existing documentation
-  - [ ] Identify documentation gaps
-  - [ ] Plan documentation structure
-  - [ ] Write new documentation
-  - [ ] Update outdated content
-  - [ ] Add code examples
-  - [ ] Review for clarity and accuracy
-  - [ ] Get feedback from users
+  - "[ ] Audit existing documentation"
+  - "[ ] Identify documentation gaps"
+  - "[ ] Plan documentation structure"
+  - "[ ] Write new documentation"
+  - "[ ] Update outdated content"
+  - "[ ] Add code examples"
+  - "[ ] Review for clarity and accuracy"
+  - "[ ] Get feedback from users"
 
 # Context template - common tracking needs
 context:
