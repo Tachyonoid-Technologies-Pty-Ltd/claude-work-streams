@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.2.1] - 2025-10-31
+
+### Fixed
+- Corrected npm badges in README.md to reference `@tachyonoid/work-streams` instead of `@claude-code/work-streams`
+- Fixed npm package page displaying incorrect badge links
+
+---
+
 ## [1.2.0] - 2025-10-31
 
 ### Added

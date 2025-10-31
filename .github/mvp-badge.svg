@@ -31,16 +31,16 @@
   <!-- Border box -->
   <rect x="20" y="15" width="760" height="90" fill="none" stroke="#58a6ff" stroke-width="2" stroke-dasharray="6,3"/>
 
-  <!-- Left section - MVP Release -->
+  <!-- Left section - NPM Package -->
   <text x="60" y="50" class="badge-text" fill="#8b949e">STATUS:</text>
-  <text x="60" y="75" class="badge-text" fill="#58a6ff">MVP RELEASE</text>
+  <text x="60" y="75" class="badge-text" fill="#58a6ff">NPM PACKAGE</text>
 
   <!-- Center divider -->
   <line x1="280" y1="25" x2="280" y2="95" stroke="#58a6ff" stroke-width="2" stroke-dasharray="4,4"/>
 
   <!-- Center section - Version -->
   <text x="400" y="45" text-anchor="middle" class="badge-text" fill="#8b949e">VERSION</text>
-  <text x="400" y="75" text-anchor="middle" class="version-text" fill="url(#blueGradient)">v1.2.0</text>
+  <text x="400" y="75" text-anchor="middle" class="version-text" fill="url(#blueGradient)">v1.2.1</text>
 
   <!-- Right divider -->
   <line x1="520" y1="25" x2="520" y2="95" stroke="#58a6ff" stroke-width="2" stroke-dasharray="4,4"/>
