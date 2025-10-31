@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.2.2] - 2025-10-31
+
+### Fixed
+- Updated README to use absolute GitHub URL for badge image to ensure correct version displays on npm
+- Updated badge version text from v1.2.0 to v1.2.1 in README alt text
+
+---
+
 ## [1.2.1] - 2025-10-31
 
 ### Fixed

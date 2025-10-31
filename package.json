@@ -1,6 +1,6 @@
 {
   "name": "@tachyonoid/work-streams",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Intelligent work stream management for Claude Code - seamlessly continue complex development tasks across multiple sessions with template-driven workflows",
   "main": "lib/index.js",
   "bin": {

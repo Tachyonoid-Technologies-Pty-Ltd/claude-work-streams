@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src=".github/mvp-badge.svg" alt="NPM Package Release v1.2.0" width="800">
+  <img src="https://raw.githubusercontent.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams/development/.github/mvp-badge.svg" alt="NPM Package Release v1.2.1" width="800">
 </p>
 
 <p align="center">
