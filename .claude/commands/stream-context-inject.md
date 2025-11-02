@@ -8,6 +8,12 @@ Generate an intelligent context summary from stream history and inject it into t
 
 **Usage:** `/project:stream-context-inject [stream-name]`
 
+**Context Budget Considerations:**
+- Effective usable space: ~164,000 tokens
+- Recommended injection size: <2,000 tokens (<2% of usable space)
+- Maximum injection size: <4,000 tokens (<3% of usable space)
+- This leaves ~160k tokens for actual development work
+
 **Process:**
 1. Read stream metadata from specified stream
 2. Analyze stream history:
@@ -17,7 +23,7 @@ Generate an intelligent context summary from stream history and inject it into t
    - Current goals and status
 3. Generate condensed context summary (aim for <2000 tokens)
 4. Format as clear, structured prompt
-5. Display for review
+5. Display for review with token estimate
 6. Optionally inject into conversation
 
 **Context Summary Structure:**
@@ -46,6 +52,14 @@ NEXT STEPS:
 - Include critical decisions regardless of age
 - Limit file list to actively modified files
 - Keep goal list concise
-- Total context should be digestible (< 2000 tokens)
+- Target: <2000 tokens (<2% of 164k usable space)
+- Maximum: <4000 tokens if absolutely necessary
 
-After generation, ask user if they want to inject into conversation.
+**Token Efficiency Tips:**
+- Use abbreviations for file paths
+- Summarize checkpoint descriptions to key points
+- Group similar decisions together
+- Focus on "what" and "why", not "how"
+- Remove redundant information
+
+After generation, display summary with estimated token count and ask user if they want to inject into conversation.

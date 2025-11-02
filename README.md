@@ -3,112 +3,141 @@
 </p>
 
 <p align="center">
-  <img src=".github/mvp-badge.svg" alt="MVP Release v1.1.0" width="800">
+  <img src="https://raw.githubusercontent.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams/development/.github/mvp-badge.svg" alt="NPM Package Release v1.2.1" width="800">
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@tachyonoid/work-streams"><img src="https://img.shields.io/npm/v/@tachyonoid/work-streams.svg" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@tachyonoid/work-streams"><img src="https://img.shields.io/npm/dm/@tachyonoid/work-streams.svg" alt="npm downloads"></a>
+  <a href="https://github.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@tachyonoid/work-streams.svg" alt="license"></a>
 </p>
 
 ---
 
 ## Release Notes
 
-### v1.1.0 - Stream Templates (Current Release)
+### v1.2.0 - NPM Package & Enhanced Developer Experience (Current Release)
 
-This release adds a comprehensive template system providing structured guidance for common development workflows.
+This release transforms Work Streams into a professional NPM package with conversational commands and enhanced configuration management.
 
 **New Features**:
-• Stream templates for common workflows (feature, bug-fix, refactoring, documentation)
-• `/stream-template` command with list/show/use actions
-• Template integration with `/stream-start --template` flag
-• Pre-defined goals, checkpoint guidance, and best practises per workflow
-• Custom template support for user-defined workflows
+• NPM Package: Install globally or per-project with `npm install -g @tachyonoid/work-streams`
+• Interactive Setup: New `/stream-init` command with conversational wizard
+• Configuration Management: New `/stream-config` command with full CRUD operations
+• Interactive Dashboard: Redesigned `/stream-dashboard` with conversational menu (12 actions)
+• Stream Switcher: New `/stream-switch` command with fuzzy matching
+• Conversational UX: All interactive commands use natural, conversational flow
+• Enhanced Templates: Interactive template browser with detailed previews
+• Comprehensive API: Programmatic library access for automation
+
+**Technical Improvements**:
+• Conversational interaction pattern (no fake TUI elements)
+• Smart recommendations based on context, time, and progress
+• Flexible input interpretation (numbers, names, natural language)
+• Progressive autonomy approach for intelligent assistance
+• CLI and library exports for maximum flexibility
+
+### v1.1.0 - Stream Templates
+
+Added comprehensive template system providing structured guidance for common development workflows.
 
 ### v1.0.0 - MVP Release
 
 Initial release with core stream management functionality.
 
 ### Current Functionality
-• 11 working commands for stream management
+• 15 comprehensive commands for stream management
+• NPM package for easy installation and updates
+• Interactive conversational commands (dashboard, switch, init, config)
 • Stream templates for common development workflows
 • Template-driven workflow guidance with pre-defined goals
 • Smart context injection and restoration
+• Full configuration management with CRUD operations
 • Git integration with branch tracking and commits
 • Context monitoring with optimised thresholds
+• Programmatic API for automation
 • File based YAML metadata storage
 • Tested with real context compaction scenarios
 
-### Areas for Improvement
+### What's New in v1.2.0
 
-**Stability and Robustness**
-• Error handling needs enhancement for edge cases
-• No automatic recovery from failures
-• Missing validation for malformed stream data
-• No rollback capability for failed operations
+**Addressed in This Release:**
+• Interactive conversational commands (dashboard, switch, init, config)
+• Configuration management with full CRUD operations
+• Fuzzy matching for stream selection
+• Smart recommendations based on context and time
+• Comprehensive documentation (Installation, API, Examples, Changelog)
+• Programmatic API for automation
+• Factually correct context monitoring (164k effective limit)
+• NPM package distribution
 
-**User Experience**
-• No interactive prompts or confirmations
-• Limited feedback during long operations
-• No progress indicators
-• Manual context threshold checking only
+**Future Enhancements (v1.3.0+)**
 
-**Git Integration**
-• No remote sync detection or conflict handling
-• Missing branch protection checks
-• No stash management
-• Limited merge conflict support
+**Git Integration:**
+• Remote sync detection and conflict handling
+• Branch protection awareness
+• Stash management
+• Advanced merge conflict support
 
-**Stream Management**
-• No stream search or filtering
-• No archiving or cleanup features
-• Cannot merge or split streams
-• No stream dependencies or linking
+**Stream Management:**
+• Advanced search and filtering
+• Automated archiving and cleanup
+• Stream merge and split capabilities
+• Stream dependencies and linking
 
-**Collaboration**
-• Single user only (no multi developer support)
-• No stream sharing mechanisms
-• Missing conflict resolution for shared streams
-• No access control or permissions
+**Collaboration (v2.0.0):**
+• Multi-developer support
+• Stream sharing mechanisms
+• Conflict resolution for shared streams
+• Access control and permissions
 
-**Advanced Features**
-• No export to markdown or HTML reports
-• Missing analytics or metrics
-• No automated checkpoint suggestions
-• Limited customization options
-• No plugin system for extensions
+**Analytics (v2.1.0):**
+• Export to markdown/HTML reports
+• Development metrics and insights
+• Automated checkpoint suggestions based on AI
+• Velocity tracking
 
 ### Roadmap
 
-**v1.1.0: Stream Templates (Current Release)**
-• Stream templates for common workflows ✓
-• Template management commands ✓
-• Pre-defined goals and guidance ✓
-• Custom template support ✓
+**v1.2.0: NPM Package & Enhanced UX (Current Release)** ✓
+• NPM package distribution ✓
+• Interactive conversational commands ✓
+• Configuration management (8 CRUD operations) ✓
+• Interactive dashboard with 12 actions ✓
+• Stream switcher with fuzzy matching ✓
+• Comprehensive documentation ✓
+• Programmatic API ✓
+• Corrected context monitoring (164k limit) ✓
 
-**v1.2.0: Stability and Enhanced UX (Next Release)**
+**v1.3.0: Enhanced Stability (Next)**
 • Comprehensive error handling
 • Input validation and sanitization
 • Automatic recovery mechanisms
-• Interactive prompts for critical operations
-• Progress indicators for long tasks
-• Search and filtering capabilities
+• Progress indicators for long operations
+• Advanced search and filtering
 
-**v1.3.0: Advanced Git**
+**v1.4.0: Advanced Git Integration**
 • Remote sync detection
 • Merge conflict helpers
 • Branch protection awareness
-• Stash integration
+• Stash management
+• PR integration
 
-**v2.0.0: Collaboration**
-• Multi developer support
+**v2.0.0: Claude Agent SDK Integration**
+• AI-powered stream insights
+• Multi-stream orchestration
+• Advanced context management
+• Template-driven AI assistance
+• Intelligent checkpoint suggestions
+
+**v2.1.0: Team Collaboration**
+• Multi-developer support
 • Stream sharing and permissions
-• Conflict resolution for shared streams
+• Conflict resolution
 • Team coordination features
+• Shared templates
 
-**v2.1.0: Analytics and Reporting**
-• Export to markdown and HTML
-• Development metrics and insights
-• Automated checkpoint suggestions
-• Customizable reports
-
-**Contributions Welcome**: This is an open roadmap. Feature requests, bug reports, and pull requests are encouraged at [GitHub Issues](https://github.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams/issues).
+**Contributions Welcome**: Feature requests, bug reports, and pull requests encouraged at [GitHub Issues](https://github.com/Tachyonoid-Technologies-Pty-Ltd/claude-work-streams/issues).
 
 ---
 
@@ -122,23 +151,72 @@ Claude Work Streams provides true session continuity by automatically preserving
 
 ## Features
 
+**Core Workflow Management:**
 - **Stream Templates**: Pre-configured workflows for common development patterns (feature, bug-fix, refactoring, documentation)
-- **Template-Driven Workflows**: Pre-defined goals, checkpoint guidance, and best practises for each workflow type
+- **Template-Driven Workflows**: Pre-defined goals, checkpoint guidance, and best practices for each workflow type
 - **Work Stream Tracking**: Group related work into continuous streams spanning multiple sessions
+- **Flexible Progress Tracking**: Lightweight updates and comprehensive checkpoints
+- **Custom Templates**: Create your own templates for recurring workflows
+
+**New in v1.2.0:**
+- **Interactive Dashboard**: Conversational dashboard with 12 actions and smart recommendations
+- **Stream Switcher**: Fuzzy matching stream selector with preview and auto-resume
+- **Configuration Management**: Full CRUD operations (8 actions) with validation
+- **NPM Distribution**: Install globally or per-project, programmatic API access
+- **Accurate Context Monitoring**: Based on factual 164k effective limit (not 200k theoretical)
+
+**Context & Continuity:**
 - **Smart Context Injection**: Automatic context restoration with intelligent summarization (under 2000 tokens)
 - **Seamless Continuity**: Resume work streams with full context automatically injected
-- **Flexible Progress Tracking**: Lightweight updates and comprehensive checkpoints
-- **Context Monitoring**: Real-time context usage tracking with smart recommendations
-- **Git Integration**: Full git support with branch tracking, commit management, and state monitoring
-- **Stream Navigation**: Browse, resume, and manage multiple work streams
-- **Neutral Commit Messages**: Professional git commits with no tool attribution
-- **Custom Templates**: Create your own templates for recurring workflows
+- **Context Monitoring**: Real-time usage tracking with accurate thresholds (75%/85%/90%/95%)
+- **Auto-Compact Awareness**: Warnings before Claude Code's auto-compact at 155k tokens
+
+**Git Integration:**
+- **Branch Management**: Full git support with branch tracking and linking
+- **Commit Management**: Neutral commits with conventional commit format
+- **State Monitoring**: Track git status, branches, and synchronization
+- **Professional Messages**: No AI attribution in commits
+
+**Developer Experience:**
+- **Conversational Commands**: Natural interaction (no fake TUI elements)
+- **Flexible Input**: Numbers, names, or natural language
+- **Smart Recommendations**: Based on context usage, time, and progress
+- **Programmatic API**: 7 functions for automation and scripting
 
 ## Installation
 
-1. Clone or download this repository to your local machine
-2. Copy the `.claude` directory into your project root
-3. The commands and templates will be available immediately in Claude Code
+### Method 1: NPM Package (Recommended)
+
+Install globally for use across all projects:
+
+```bash
+# Install globally
+npm install -g @tachyonoid/work-streams
+
+# Initialize in your project
+npx stream-init
+```
+
+Or install per-project:
+
+```bash
+# Install in project
+npm install --save-dev @tachyonoid/work-streams
+
+# Initialize
+npx stream-init
+```
+
+The interactive wizard will:
+1. Create `.claude/` directory structure
+2. Install all 15 commands
+3. Install 4 built-in templates
+4. Configure git integration (optional)
+5. Set up team features (optional)
+
+### Method 2: Manual Installation
+
+For Claude Code plugin development or customization:
 
 ```bash
 # Clone the repository
@@ -155,10 +233,13 @@ Or manually:
 4. Copy `plugin.json` to `.claude/` directory
 
 **What's included**:
-• 11 stream management commands
+• 15 stream management commands
 • 4 built-in workflow templates
+• Interactive conversational commands
+• Configuration management system
 • Template system for custom workflows
 • Git integration commands
+• Programmatic API
 
 ## Quick Start
 
@@ -195,7 +276,23 @@ Or manually:
 
 ## Commands
 
+### Setup & Configuration (New in v1.2.0)
+- `/stream-init` - Interactive setup wizard for initializing Work Streams in your project
+- `/stream-config show` - Display current configuration with descriptions
+- `/stream-config set [key] [value]` - Set configuration value with validation
+- `/stream-config get [key]` - Retrieve specific configuration value
+- `/stream-config reset` - Reset configuration to defaults
+- `/stream-config edit` - Open configuration in system editor
+- `/stream-config validate` - Validate configuration file
+- `/stream-config export [file]` - Export configuration for sharing
+- `/stream-config import [file]` - Import team configuration
+
+### Interactive Commands (New in v1.2.0)
+- `/stream-dashboard` - Interactive dashboard with conversational menu (12 actions)
+- `/stream-switch [name]` - Switch between streams with fuzzy matching and preview
+
 ### Stream Templates
+- `/stream-template` - Interactive template browser (new)
 - `/stream-template list` - Display all available templates (built-in and custom)
 - `/stream-template show [name]` - View detailed template information and guidance
 - `/stream-template use [template] [stream-name]` - Create stream from template
@@ -290,8 +387,9 @@ Or manually:
 ```bash
 # Monitor context usage throughout development
 /stream-context-check
+# Output: Context Status: 68% used (111k of 164k tokens), Status: Healthy
 
-# When context gets high (90%+), create checkpoint
+# When context reaches 85%+, create checkpoint
 /stream-checkpoint "API integration complete"
 
 # End stream and resume later
@@ -318,14 +416,92 @@ Or manually:
 /stream-end
 ```
 
+### New in v1.2.0: Interactive Dashboard
+```bash
+# Open interactive dashboard
+/stream-dashboard
+
+# Dashboard displays:
+# - Current stream overview (name, status, progress, context usage)
+# - 12 interactive actions (checkpoint, update, status, switch, etc.)
+# - Smart recommendations based on time and progress
+# - Git status and recent activity
+
+# Conversational interaction
+# Your choice: 1
+# Creates checkpoint interactively
+
+# Dashboard refreshes automatically
+# Your choice: 4
+# Opens stream switcher
+
+# Your choice: 0
+# Exits dashboard
+```
+
+### New in v1.2.0: Stream Switching
+```bash
+# Switch between streams with fuzzy matching
+/stream-switch
+
+# Interactive switcher shows:
+# Available Streams (3):
+#   1. api-authentication (feature, 75% complete)
+#   2. database-optimization (refactor, 40% complete)
+#   3. documentation-update (docs, 90% complete)
+#
+# Type number, name, or keywords:
+
+# Type: "database"
+# Fuzzy match finds: database-optimization
+
+# Preview shown with details
+# Switch to this stream? (yes/no/browse):
+
+# Type: yes
+# Context injected, ready to continue!
+```
+
+### New in v1.2.0: Configuration Management
+```bash
+# View configuration
+/stream-config show
+
+# Set specific values
+/stream-config set context.thresholds.warning 92
+/stream-config set templates.default "feature-development"
+
+# Get current value
+/stream-config get context.thresholds.warning
+
+# Export for team
+/stream-config export team-config.yaml
+
+# Team members import
+/stream-config import team-config.yaml
+
+# Validate configuration
+/stream-config validate
+```
+
 ## Context Monitoring Thresholds
 
-The plugin monitors your context usage and provides recommendations:
+The plugin monitors your context usage and provides recommendations based on real-world Claude Code limits.
 
-- **< 90%**: Healthy - Continue working normally
-- **90-94%**: Monitor - Start planning checkpoint soon
-- **95-97%**: Warning - Create checkpoint NOW and prepare transition
-- **98%+**: Critical - Checkpoint and transition IMMEDIATELY
+**Context Window Reality:**
+- Total capacity: 200,000 tokens
+- System overhead: ~36,000 tokens (system prompt, tools, output buffer)
+- Effective usable space: ~164,000 tokens
+- Auto-compact trigger: ~155,000 tokens (95% of usable space)
+
+**Monitoring Thresholds** (percentage of 164k usable space):
+
+- **< 75% (< 123k tokens)**: Healthy - Continue working normally
+- **75-85% (123k-139k tokens)**: Monitor - Start planning checkpoint soon
+- **85-90% (139k-148k tokens)**: Warning - Create checkpoint NOW and prepare transition
+- **90-95% (148k-156k tokens)**: Critical - Checkpoint IMMEDIATELY (auto-compact imminent)
+
+These realistic thresholds account for the fact that Claude Code's auto-compact triggers at approximately 155k tokens, not at the theoretical 200k limit.
 
 ## Stream Metadata
 

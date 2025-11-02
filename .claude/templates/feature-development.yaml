@@ -14,14 +14,14 @@ stream_naming:
 
 # Goals template - common objectives for feature development
 goals:
-  - [ ] Define feature requirements and scope
-  - [ ] Design feature architecture and API
-  - [ ] Implement core functionality
-  - [ ] Write unit tests
-  - [ ] Write integration tests
-  - [ ] Update documentation
-  - [ ] Code review and refinement
-  - [ ] User testing and feedback
+  - "[ ] Define feature requirements and scope"
+  - "[ ] Design feature architecture and API"
+  - "[ ] Implement core functionality"
+  - "[ ] Write unit tests"
+  - "[ ] Write integration tests"
+  - "[ ] Update documentation"
+  - "[ ] Code review and refinement"
+  - "[ ] User testing and feedback"
 
 # Context template - common tracking needs
 context:

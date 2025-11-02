@@ -14,14 +14,14 @@ stream_naming:
 
 # Goals template - common objectives for refactoring
 goals:
-  - [ ] Identify code smells and technical debt
-  - [ ] Define refactoring goals and scope
-  - [ ] Ensure test coverage before changes
-  - [ ] Plan refactoring approach
-  - [ ] Implement refactoring incrementally
-  - [ ] Verify all tests still pass
-  - [ ] Review performance impact
-  - [ ] Update documentation
+  - "[ ] Identify code smells and technical debt"
+  - "[ ] Define refactoring goals and scope"
+  - "[ ] Ensure test coverage before changes"
+  - "[ ] Plan refactoring approach"
+  - "[ ] Implement refactoring incrementally"
+  - "[ ] Verify all tests still pass"
+  - "[ ] Review performance impact"
+  - "[ ] Update documentation"
 
 # Context template - common tracking needs
 context:
