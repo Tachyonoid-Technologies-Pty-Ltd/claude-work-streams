@@ -79,6 +79,7 @@ milestones:
 
 # Tips and best practices
 tips:
+  - "Use /stream-update regularly to track progress"
   - "Use /stream-checkpoint after each milestone"
   - "Commit frequently with clear, conventional messages"
   - "Update tests as you implement features"
